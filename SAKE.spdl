@@ -1,0 +1,159 @@
+usertype String;
+
+hashfunction H;
+
+const XOR:Function;
+
+const CON:Function;
+
+const ADD:Function;
+
+const PUF:Function;
+
+const FGEN:Function;
+
+const FREC:Function;
+
+const Hello:String;
+
+// N' = omega XOR N
+
+macro eth = H(CON(IDi,tau));
+macro M1= {Ci}k(DRi,GCSj);
+
+macro Ri= PUF(Ci);
+macro M2= {Ri}k(DRi,GCSj);
+
+macro omega= FGEN(Ri);
+macro M3= {IDi, SIDi, eth, varph}k(DRi,GCSj);
+
+
+macro Varphii =XOR(eth, N);
+
+macro Chi = XOR(XOR(IDi,N),LI);
+
+macro Psii = H(CON(CON(CON(IDi,N),LI),eth));
+
+
+macro Mpr = XOR(M,N);
+
+macro Psij =H(CON(SID,M),Ri);
+
+
+macro omega= FREC(Ri,varph);
+
+macro SK = H(CON(CON(CON(IDi,M),N),omega));
+
+
+protocol IoD-IoT(DRi,GCSj){
+
+
+
+role DRi{
+
+
+
+secret  IDi,IDi, Ci, Ri, LI, SK,tau;
+
+fresh N;
+
+var SIDi, M, varph;
+
+// Start of Registration
+recv_1(GCSj,DRi,M1);
+send_2(DRi,GCSj,M2);
+recv_3(GCSj,DRi,M3);
+// End of Registration
+
+
+// Start of Login
+send_4(DRi,GCSj,SIDi,Varphii,Chi,Psii);
+
+recv_5(GCSj,DRi,Mpr,Ci,Psij);
+// End of Login
+
+
+claim(DRi,Niagree);
+
+
+
+claim(DRi,Nisynch);
+
+
+
+claim(DRi,Alive);
+
+
+
+claim(DRi,Weakagree);
+
+
+
+claim(DRi,Secret,SK);
+claim(DRi,Secret,IDi);
+claim(DRi,Secret,omega);
+
+
+
+}
+
+
+
+role GCSj{
+
+
+
+secret IDi, Ci, Ri, LI, tau,SK;
+
+
+
+var N;
+
+
+
+fresh SIDi, M, varph;
+
+// Start of Registration
+send_1(GCSj,DRi,M1);
+recv_2(DRi,GCSj,M2);
+send_3(GCSj,DRi,M3);
+// End of Registration
+
+
+// Start of Login
+recv_4(DRi,GCSj,SIDi,Varphii,Chi,Psii);
+
+send_5(GCSj,DRi,Mpr,Ci,Psij);
+// End of Login
+
+
+
+
+
+
+claim(GCSj,Niagree);
+
+
+
+claim(GCSj,Nisynch);
+
+
+
+claim(GCSj,Alive);
+
+
+
+claim(GCSj,Weakagree);
+
+
+
+claim(GCSj,Secret,SK);
+claim(GCSj,Secret,IDi);
+claim(GCSj,Secret,omega);
+
+
+}
+
+
+
+}
