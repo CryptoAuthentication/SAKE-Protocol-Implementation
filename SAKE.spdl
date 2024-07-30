@@ -91,7 +91,7 @@ claim(DRi,Weakagree);
 
 claim(DRi,Secret,SK);
 claim(DRi,Secret,IDi);
-claim(DRi,Secret,omega);
+
 
 
 
@@ -149,7 +149,6 @@ claim(GCSj,Weakagree);
 
 claim(GCSj,Secret,SK);
 claim(GCSj,Secret,IDi);
-claim(GCSj,Secret,omega);
 
 
 }
