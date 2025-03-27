@@ -47,7 +47,9 @@ To get started, clone the repository and follow the installation steps to set up
 git clone https://github.com/your-repository-url.git
 
 
-Requirements:
+## Requirements:
+
+```bash
 Python 3.x
 
 Required libraries: pynmea2, hashlib, time, etc.
@@ -55,12 +57,12 @@ Required libraries: pynmea2, hashlib, time, etc.
 📚 Usage
 Once you have set up the environment, run the script to initialize the authentication process. Both sides (UAV and GSS) will exchange keys and perform mutual authentication.
 
-bash
-Copy
+```bash
 python3 GSS_GCM_BCH.py
+```bash
 python3 DR_GCM_BCH.py
 
-🚀 Real-World Testbed
+## 🚀 Real-World Testbed
 The protocol has been successfully tested on a real-world testbed using actual UAVs and GSS devices. The testbed setup includes the following specifications:
 
 UAV Side: Raspberry Pi 4B running Ubuntu 22.04, communicating with Pix32 v6 and a GPS module.
