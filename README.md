@@ -45,12 +45,13 @@ To get started, clone the repository and follow the installation steps to set up
 
 ```bash
 git clone https://github.com/your-repository-url.git
-
+```
 
 ## Requirements:
 
 ```bash
 Python 3.x
+```
 
 Required libraries: pynmea2, hashlib, time, etc.
 
@@ -59,8 +60,8 @@ Once you have set up the environment, run the script to initialize the authentic
 
 ```bash
 python3 GSS_GCM_BCH.py
-```bash
 python3 DR_GCM_BCH.py
+```
 
 ## 🚀 Real-World Testbed
 The protocol has been successfully tested on a real-world testbed using actual UAVs and GSS devices. The testbed setup includes the following specifications:
