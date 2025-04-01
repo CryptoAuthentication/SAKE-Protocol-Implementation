@@ -2,9 +2,9 @@
 
 ## 📡 Project Overview
 
-This repository contains the **authentication protocol** designed for secure **UAV-to-GSS (Ground Station System) communication** in an **Internet of Drones (IoD)** environment. The goal of this project is to provide a robust and secure communication framework to ensure the integrity and confidentiality of data transmitted between **Unmanned Aerial Vehicles (UAVs)** and **Ground Station Servers (GSS)**.
+This repository contains the **authentication protocol** real-world implementation source code for secure **Unmanned Aerial Vehicles-to-Ground Station Servers (UAV-to-GSS) communication** in an **Internet of Drones (IoD)** environment. The goal of this project is to provide a robust and secure communication framework to ensure the integrity and confidentiality of data transmitted between **Unmanned Aerial Vehicles (UAVs)** and **Ground Station Servers (GSS)**.
 
-The protocol leverages state-of-the-art cryptographic techniques to establish mutual authentication and protect against various attack vectors. The system is designed to be implemented on a real-world testbed using actual devices, ensuring practical applicability in real-world scenarios.
+The protocol leverages state-of-the-art cryptographic techniques to establish mutual authentication and protect the IoD environment against various attack vectors. The system is designed to be implemented on a real-world testbed using actual devices, ensuring practical applicability in real-world scenarios.
 
 ## 🛠️ Features
 
@@ -47,7 +47,7 @@ To get started, clone the repository and follow the installation steps to set up
 git clone https://github.com/your-repository-url.git
 ```
 
-## Requirements:
+## 📝 Requirements:
 
 ```bash
 Python 3.x
@@ -55,7 +55,7 @@ Python 3.x
 
 Required libraries: pynmea2, hashlib, time, etc.
 
-📚 Usage
+## 📚 Usage
 Once you have set up the environment, run the script to initialize the authentication process. Both sides (UAV and GSS) will exchange keys and perform mutual authentication.
 
 ```bash
