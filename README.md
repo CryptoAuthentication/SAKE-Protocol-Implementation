@@ -15,7 +15,7 @@ The protocol leverages state-of-the-art cryptographic techniques to establish mu
 
 ## 📋 Specifications
 
-### **UAV Side:**
+### **🛸 UAV Side:**
 
 - **OS:** Ubuntu 22.04
 - **RAM:** 4GB LPDDR4
@@ -29,7 +29,7 @@ The protocol leverages state-of-the-art cryptographic techniques to establish mu
 - **Camera:** Sony IMX219
 - **Programming Language:** Python
 
-### **GSS Side:**
+### **🖥️ GSS Side:**
 
 - **OS:** Windows 11
 - **RAM:** 32GB DDR4
